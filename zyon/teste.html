@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body>
+
+</body>
+<canvas id="myChart" width="200" height="200"></canvas>
+<script>
+    var ctx = document.getElementById('myChart');
+    let chart = new Chart(ctx, {
+        type: 'logarithmic'
+        data: {
+            datasets: [{
+                label: 'First dataset',
+                data: [0, 20, 40, 50]
+            }],
+            labels: ['January', 'February', 'March', 'April']
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        suggestedMin: 50,
+                        suggestedMax: 100
+                    }
+                }]
+            }
+        }
+    });
+
+</script>
+
+</html>
